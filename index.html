@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 01</title>
+    <style>
+        #titulo {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo" style="color: red;">Titulo</h1>
+
+    <h2 class="subtitulo">Subtitulo 1</h2>
+
+    <p>Parrafo</p>
+
+    <ul>
+        <li class="item" id="item">Item 01</li>
+        <li class="item">Item 02</li>
+        <li class="item">Item 03</li>
+    </ul>
+
+    <h2 class="subtitulo">Subtitulo 2</h2>
+
+    <p>Parrafo</p>
+
+    <h2>Subtitulo 3</h2>
+    
+    <script>
+        var nombre = 'string';
+        var numero = 10;
+        var booleano = true; // false
+        // var indefinido = undefined;
+        var nulo = null;
+
+        var nombreUsuario = '';
+        var array = null;
+        var objeto = null;
+
+        array = [];
+        objeto = {};
+
+        var cadena;
+        console.log(cadena);
+
+        console.log(typeof nombre); // string
+
+        let usuario = 'jonathan';
+        let num;
+
+        // console.log(usuarioUno);
+        // let usuarioUno = 'lala'; // Uncaught ReferenceError: Cannot access 'usuarioUno' before initialization
+
+        // let usuarioUno = 'uno';
+        // let usuarioUno = 'dos'; // Uncaught SyntaxError: Identifier 'usuarioUno' has already been declared
+        // console.log(usuarioUno);
+        
+        // const constante; // Uncaught SyntaxError: Missing initializer in const declaration
+        const constante = 3.14159;
+        // constante = 12; // Uncaught TypeError: Assignment to constant variable
+
+
+        // var global = 'global';
+
+        // function n() {
+        //     var local = 'local';
+
+        //     console.log('Adentro: ', global);
+        //     console.log('Adentro: ', local);
+        // }
+
+        // n();
+        // console.log('Afuera: ', global);
+        // console.log('Afuera: ', local); // Uncaught ReferenceError: local is not defined
+
+        // let global = 'global';
+
+        // if (true) {
+        //     let local = 'local';
+
+        //     console.log('Adentro: ', global);
+        //     console.log('Adentro: ', local);
+        // }
+
+        // console.log('Afuera: ', global);
+        // console.log('Afuera: ', local); // Uncaught ReferenceError: local is not defined
+        
+        const titulo = document.getElementById('titulo'); // Nodo || null
+        console.dir(titulo);
+
+        const subtitulos = document.getElementsByClassName('subtitulo'); // HTMLColletion
+        console.log(subtitulos);
+
+        const parrafos = document.getElementsByTagName('p'); // HTMLCollection
+        console.log(parrafos);
+
+        const h1 = document.querySelector('#titulo'); // Nodo || null
+        console.dir(h1);
+
+        const h2 = document.querySelectorAll('h2'); // NodeList
+        console.log(h2);
+        
+        for (let i = 0; i < h2.length; i++) {
+            // console.log(h2[i]);
+            console.log(h2[i].textContent);
+            console.log(h2[i].innerText);
+
+            // h2[i].textContent = 'Titulo <em>nuevo</em>';
+            h2[i].innerHTML = 'Titulo <em>nuevo</em>';
+        }
+
+        h1.style.color = 'blue';
+        h1.style.backgroundColor = 'orange';
+
+
+        const tit = document.getElementById('titulo');
+        const item = document.querySelector('#item');
+
+        const numeros = [1, 2, 3];
+        numeros[0] = 10;
+        numeros.push(4, 5);
+        numeros.pop();
+        console.log(numeros);
+
+        const nodos = [tit, item];
+
+        for (let i = 0; i < nodos.length; i++) {
+            nodos[i].style.backgroundColor = 'purple';
+        }
+
+    </script>
+</body>
+</html>
